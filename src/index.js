@@ -35,3 +35,7 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     res.send('esto es una prueba desde el backend')
 })
+
+app.delete('/borrarAlgo', (req, res) => {
+    res.send('se borro algo')
+})
