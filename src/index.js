@@ -2,6 +2,8 @@ import express from 'express'
 import morgan from 'morgan';
 import cors from 'cors'
 import './database'
+import router from "./routes/products.routes"
+
 //crear la instanciade Express
 const app = express()
 
@@ -31,7 +33,14 @@ app.use(express.static('public'))
 
 
 //Rutas
+app.use('/rollingFood', router)
 
-app.get('/', (req, res) => {
-    res.send('esto es una prueba desde el backend')
-})
+
+
+// app.get('/', (req, res) => {
+//     res.send('esto es una prueba desde el backend')
+// })
+
+// app.delete('/borrarAlgo', (req, res) => {
+//     res.send('Se borro algo')
+// })
